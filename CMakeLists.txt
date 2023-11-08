@@ -18,7 +18,7 @@ target_compile_options(${PROJECT_NAME}.elf PRIVATE
 )
 
 add_custom_target(run
-    COMMAND qemu-system-arm -sS -M stm32vldiscovery -m 128M -nographic -semihosting -kernel ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.elf
+    COMMAND qemu-system-arm -sS -M olimex-stm32-h405 -m 128M -nographic -semihosting -kernel ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.elf
 )
 
 target_link_options(${PROJECT_NAME}.elf PRIVATE
